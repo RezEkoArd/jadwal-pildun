@@ -1,4 +1,5 @@
 import './globals.css'
+import "moment/locale/id"
 
 export default function RootLayout({
   children,
@@ -7,12 +8,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body>
+        <main className='container min-h-screen'>
+         {children}
+        </main>
+        <footer className='p-[40px] bg-zinc-100 mt-[10px]'>
+          Made By Rezekoard @2023
+        </footer>
+      </body>
     </html>
   )
 }
